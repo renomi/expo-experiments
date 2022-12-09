@@ -6,15 +6,7 @@ import { Ionicons } from '@expo/vector-icons';
 
 const MotifiedIcon = motify(Ionicons)();
 
-const absoluteFillObject = {
-  position: 'absolute',
-  left: 0,
-  right: 0,
-  top: 0,
-  bottom: 0,
-};
-
-export const ButtonToggle = ({ onPress, size, icon, color, isActive }) => {
+export const buttonToggle = ({ onPress, size, icon, color, isActive }) => {
   const _size = useMemo(() => size, [size]);
   const _icon = useMemo(() => icon, [icon]);
   const _color = useMemo(() => color, [color]);
@@ -47,4 +39,12 @@ export const ButtonToggle = ({ onPress, size, icon, color, isActive }) => {
       />
     </TouchableOpacity>
   );
+};
+
+const absoluteFillObject = {
+  position: 'absolute',
+  left: 0,
+  right: 0,
+  top: 0,
+  bottom: 0,
 };

@@ -1,29 +1,32 @@
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { WavyIcon } from '@ui/wavy-icon';
 
-const Example = () => {
+const Mockup = () => {
   return (
     <SafeAreaView style={styles.screen}>
-      <StatusBar backgroundColor="#010100" style="light" />
+      <StatusBar backgroundColor="white" style="dark" />
       <View style={styles.container}>
-        <WavyIcon />
+        <Text style={styles.label}>Mockup Screen</Text>
       </View>
     </SafeAreaView>
   );
 };
 
-export default Example;
+export default Mockup;
 
 const styles = StyleSheet.create({
   screen: {
     flex: 1,
+    backgroundColor: 'white',
   },
   container: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#010100',
+  },
+  label: {
+    fontSize: 24,
+    fontWeight: 'semibold',
   },
 });
