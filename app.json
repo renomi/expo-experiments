@@ -17,6 +17,7 @@
     "assetBundlePatterns": ["**/*"],
     "jsEngine": "hermes",
     "plugins": [
+      ["expo-community-flipper", "0.176.0"],
       [
         "expo-build-properties",
         {
