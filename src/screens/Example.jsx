@@ -1,17 +1,15 @@
-import { useReducer } from 'react';
-import { StyleSheet } from 'react-native';
-import { MotiView } from 'moti';
+import { StyleSheet, View } from 'react-native';
+import { StatusBar } from 'expo-status-bar';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { Switch } from '@ui/switch';
+import { LoadingIndicator } from '@ui/indicator';
 
 const Example = () => {
-  const [isActive, toggleIsActive] = useReducer(state => !state, false);
-
   return (
-    <SafeAreaView style={styles.container}>
-      <MotiView flex={1} justifyContent="center" alignItems="center">
-        <Switch size={40} isActive={isActive} onPress={toggleIsActive} />
-      </MotiView>
+    <SafeAreaView style={styles.screen}>
+      <StatusBar backgroundColor="#010100" style="light" />
+      <View style={styles.container}>
+        <LoadingIndicator size={100} />
+      </View>
     </SafeAreaView>
   );
 };
@@ -19,7 +17,13 @@ const Example = () => {
 export default Example;
 
 const styles = StyleSheet.create({
+  screen: {
+    flex: 1,
+  },
   container: {
     flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#010100',
   },
 });
